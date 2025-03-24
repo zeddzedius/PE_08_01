@@ -1,0 +1,535 @@
+/home/zedd/work/курсы/pe/zpe_08-01/.venv/bin/python -X pycache_prefix=/home/zedd/.PyCharmCE/system/cpython-cache /home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/pydevd.py --multiprocess --qt-support=auto --client 127.0.0.1 --port 39153 --file /home/zedd/work/курсы/pe/zpe_08-01/train_01.py
+warning: failed to delete old cython speedups. Please delete all *.so files from the directories "/home/zedd/.PyCharmCE/system/cythonExtensions/_pydevd_bundle_ext" and "/home/zedd/.PyCharmCE/system/cythonExtensions/_pydevd_frame_eval_ext"
+Connected to pydev debugger (build 243.23654.177)
+Running model on cpu
+Displaying a batch of training images...
+/home/zedd/work/курсы/pe/zpe_08-01/train_01.py:107: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.pause(0.001)
+/home/zedd/work/курсы/pe/zpe_08-01/train_01.py:118: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+/home/zedd/work/курсы/pe/zpe_08-01/.venv/lib/python3.13/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/zedd/work/курсы/pe/zpe_08-01/.venv/lib/python3.13/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+
+Training ResNet-18 from scratch
+Epoch 0/4
+----------
+train phase: 100%|██████████| 79/79 [01:13<00:00,  1.07it/s]
+train Loss: 1.0109 Acc: 0.4861
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+val Loss: 0.9926 Acc: 0.5152
+Epoch 1/4
+----------
+train phase: 100%|██████████| 79/79 [01:12<00:00,  1.08it/s]
+train Loss: 0.7529 Acc: 0.7151
+val phase:   0%|          | 0/2 [00:00<?, ?it/s]Exception ignored in: <_io.BytesIO object at 0x7f6db1c94f40>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 306, in py_start_callback
+    frame = _getframe(1)
+BufferError: Existing exports of data: object cannot be re-sized
+Exception ignored in: <_io.BytesIO object at 0x7f6db1c94f40>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 246, in instruction_callback
+    def instruction_callback(code, instruction_offset):
+BufferError: Existing exports of data: object cannot be re-sized
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+val Loss: 0.6047 Acc: 0.7879
+Exception ignored in: <_io.BytesIO object at 0x7f6db1c94f40>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 306, in py_start_callback
+    frame = _getframe(1)
+BufferError: Existing exports of data: object cannot be re-sized
+Epoch 2/4
+----------
+train phase: 100%|██████████| 79/79 [01:12<00:00,  1.09it/s]
+train Loss: 0.5365 Acc: 0.8099
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]
+train phase:   0%|          | 0/79 [00:00<?, ?it/s]val Loss: 1.1658 Acc: 0.5758
+Epoch 3/4
+----------
+train phase: 100%|██████████| 79/79 [01:13<00:00,  1.07it/s]
+val phase:   0%|          | 0/2 [00:00<?, ?it/s]train Loss: 0.4272 Acc: 0.8417
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.04s/it]
+val Loss: 0.3761 Acc: 0.8788
+Epoch 4/4
+----------
+train phase: 100%|██████████| 79/79 [01:13<00:00,  1.07it/s]
+val phase:   0%|          | 0/2 [00:00<?, ?it/s]train Loss: 0.3355 Acc: 0.8726
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.03s/it]
+val Loss: 0.3191 Acc: 0.9091
+Training complete in 6m 17s
+Best val Acc: 0.9091
+
+Fine-tuning pretrained ResNet-18
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /home/zedd/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|██████████| 44.7M/44.7M [00:01<00:00, 26.1MB/s]
+Epoch 0/4
+----------
+train phase: 100%|██████████| 79/79 [00:27<00:00,  2.87it/s]
+val phase:   0%|          | 0/2 [00:00<?, ?it/s]train Loss: 0.7379 Acc: 0.7060
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.07s/it]
+val Loss: 0.5906 Acc: 0.8182
+Epoch 1/4
+----------
+train phase: 100%|██████████| 79/79 [00:28<00:00,  2.81it/s]
+train Loss: 0.4526 Acc: 0.8508
+val phase: 100%|██████████| 2/2 [00:01<00:00,  1.31it/s]
+train phase:   0%|          | 0/79 [00:00<?, ?it/s]val Loss: 0.5150 Acc: 0.7879
+Epoch 2/4
+----------
+train phase: 100%|██████████| 79/79 [00:28<00:00,  2.81it/s]
+val phase:   0%|          | 0/2 [00:00<?, ?it/s]train Loss: 0.3947 Acc: 0.8595
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.19s/it]
+val Loss: 0.4842 Acc: 0.8182
+Epoch 3/4
+----------
+train phase: 100%|██████████| 79/79 [00:27<00:00,  2.90it/s]
+train Loss: 0.3306 Acc: 0.8944
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.05s/it]
+val Loss: 0.4281 Acc: 0.7879
+Epoch 4/4
+----------
+train phase:   0%|          | 0/79 [00:00<?, ?it/s]Exception ignored in: <_io.BytesIO object at 0x7f6da11518f0>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 246, in instruction_callback
+    def instruction_callback(code, instruction_offset):
+BufferError: Existing exports of data: object cannot be re-sized
+train phase: 100%|██████████| 79/79 [00:27<00:00,  2.84it/s]
+train Loss: 0.3440 Acc: 0.8698
+val phase: 100%|██████████| 2/2 [00:02<00:00,  1.20s/it]
+val Loss: 0.4288 Acc: 0.8182
+Training complete in 2m 29s
+Best val Acc: 0.8182
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+Exception ignored in: <function _DeleteDummyThreadOnDel.__del__ at 0x7f6ecc842520>
+Traceback (most recent call last):
+  File "/home/zedd/programms/pycharm-c/plugins/python-ce/helpers/pydev/_pydevd_bundle/pydevd_pep_669_tracing.py", line 635, in py_raise_callback
+  File "/usr/local/lib/python3.13/threading.py", line 1435, in current_thread
+TypeError: 'NoneType' object is not subscriptable
+
+Process finished with exit code 0
